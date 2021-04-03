@@ -16,11 +16,20 @@ print ('account')
 * 영어 소문자로 시작한다.
 * 2개의 단어를 쓰면 언더바 사용을 권장한다. ex) shoe_size
 * 변수 이름에는 글자, 숫자, 밑줄만 쓸 수 있다.
-* s, s_n 으로 축약하지 말고 student, student_name 과 같이 쓴다.
+* s 나 s_n 처럼 축약하지 말고 student, student_name 과 같이 쓴다.
 
 ## 2. 입력
-사용자가 입력한 값을 프로그램 안에 넣는 방법.
-### 2.1 type 함수
+* 사용자가 입력한 값을 프로그램 안에 넣는 방법.
+### 2.1 input 함수
+* input 함수는 입력하기 위한 함수이다.
+```Python
+example = input()
+example = input("쓰고싶은 내용")
+```
+코드 입력시 변수 example의 값을 입력하라고 창이 뜨게 되며 해당 창에 변수의 값을 입력한다.
+그리고 그 창에 입력한 값은 문자열로 출력된다.
+input() 괄호 안에 따옴표로 감싸 문자열과 변수의 값을 같이 쓸 수도 있다.
+### 2.2 type 함수
 
 변수의 값을 넣을 때 사용하면 기존에 문자열로 입력한 변수를 숫자로 인식한다.
 ```Python
@@ -37,23 +46,25 @@ print(name_int)
 * bool : 불리언(Boolean)
 <hr>
 
-####2.1.1 type casting
+####2.2.1 Type casting
 서로 다른 타입이어도 변환이 가능하다.
+* int to float(정수를 부동소숫점으로)
 ```Python
 float(3)
 ```
-3.0 (정수를 부동소숫점으로)
+3.0
 
+* float to int(부동소숫점을 정수로)
 ```Python
 int(3.4)
 ```
 4 (부동소숫점을 정수로)
 
-#### 2.1.2 type ( )
+#### 2.2.2 type ( )
 변수 지정후 print(type(변수명)) 입력하면 해당 변수가 int인지 float인지 str인지 bool인지 알려준다.
 ```Python
-변수 = 4.5
-print(type(변수))
+variable1 = 4.5
+print(type(variable1))
 ```
 <class 'float'>
 ## 3. 출력
@@ -68,17 +79,13 @@ print('use Python!')
 print 함수로 계산식 출력하는 법 중 특이한 기호들
 
 
-```Python
-print(13//5)
-print(21%4)
-print(2**5)
-```
-<ol>
-<li>//는 나눗셈의 몫을 구할때 쓴다.</li>
-<li>%는 나눗셈에서 나누고 난 나머지값을 나타낼 때 쓴다.</li>
-<li>2의 5승을 출력하라는 코드</li>
-</ol>
-- 사칙연산은 다른 언어들과 동일하게 (+,-,/,*)사용
+|code|description|
+|--|--|
+|print(13//5)|//는 나눗셈의 몫을 구할때 쓴다.|
+|print(21%4)|%는 나눗셈에서 나누고 난 나머지값을 나타낼 때 쓴다.|
+|print(2**5)|**는 거듭제곱이다. 즉 (x ** y) 일때 x의 y승|
+
+* 사칙연산은 다른 언어들과 동일하게 (+,-,/,*)사용
 
 
 ## 4. 자료형(Data type)
@@ -91,8 +98,19 @@ print(3<8)
 ```
 #### 4.1.1 print문에서의 사용
 ```Python
+print(4 < 7) True
+print(4 > 2) False
 print(3 == 3) 서로 같은지
 print(3 != 3) 서로 다른지
 print(3 >= 3) 이상
 print(3 <= 3) 이하
 ```
+# 5. 문자열
+## 5.1 문자열 메서드
+
+|함수|설명|예시|
+|--|--|--|
+|count()|특정 문자열이 등장하는 수를 구함.|print(변수명.count("kim"))|
+|find()|특정 문자열이 몇번째에 처음 등장하는지 표시.|print(변수명.find("kim"))|
+|replace()|일괄적으로 ','왼쪽의 문자열을 오른쪽 문자열로 한번에 변환.|print(변수명.replace("k","L"))|
+|strip()|문자열의 양쪽에 있는 공백이나 () 안에 지정한 내용 제거|print(변수명.strip())
