@@ -201,3 +201,61 @@ print(example[2:4])
 ```
 
 th
+
+# 6. 리스트
+
+## 6.1 리스트 선언
+
+[] 대괄호 안에 리스트의 내용을 넣는다.
+
+```python
+cars = ['benz', 'audi', 'bmw']
+```
+
+## 6.2 리스트 추가
+
+.append 사용시 리스트의 맨 끝에 데이터를 새로 추가한다.  
+.insert 사용시 입력한 인덱스 번호 위치에 데이터를 새로 추가하고 기존의 데이터는 한칸 뒤로 밀려난다.
+
+```python
+cars = ['benz', 'audi', 'bmw']
+
+cars.append('hyundai')
+cars.insert(1,'kia')
+
+print(cars)
+```
+
+['benz', 'kia', 'audi', 'bmw', 'hyundai']
+
+## 6.3 리스트 삭제
+
+.remove 또는 del 명령어로 삭제가 가능하다.
+
+```python
+cars = ['benz', 'audi', 'bmw']
+
+cars.remove('benz')
+del cars[1]
+
+print(cars)
+```
+
+['audi']
+
+- cars.remove('benz') 로 리스트가 'audi','bmw' 가 된 상태에서 del cars[1] 명령을 받아 인덱스번호 1번째 자리에 있는 'bmw'를 제거하였다.
+
+['porsche', 'audi', 'bmw']
+
+## 6.4 리스트 수정
+
+```python
+cars = ['benz', 'audi', 'bmw']
+cars[0] = 'porsche'
+
+print(cars)
+```
+
+['porsche', 'audi', 'bmw']
+
+- 변수명[인덱스번호] = '수정할 데이터' 로 선언하여 기존 내용을 수정할 데이터로 바꾼다.
