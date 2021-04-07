@@ -259,3 +259,62 @@ print(cars)
 ['porsche', 'audi', 'bmw']
 
 - 변수명[인덱스번호] = '수정할 데이터' 로 선언하여 기존 내용을 수정할 데이터로 바꾼다.
+
+# 7. 조건문
+
+콜론`:` 으로 닫고 tab으로 띄우고 print("실행문") 작성한다.
+
+```python
+cash = int(input("돈 얼마있어?"))
+if cash > 15000:
+    print("점심 나가서 먹자")
+```
+
+input 값이 15000보다 크면 "점심 나가서 먹자" 출력.
+
+## 7.1 and 조건
+
+- 조건 1, 조건 2 둘다 맞아야 실행된다.
+
+```python
+age1 = int(input("홍길동의 나이는?"))
+age_digit1 = int(age1)
+age2 = int(input("심청이의 나이는?"))
+age_digit2 = int(age2)
+
+if age_digit1 >= 19 and age_digit2 >= 19:
+    print("성인입니다")
+```
+
+홍길동의 나이와 심청이의 나이가 둘 다 19 이상이어야 '성인입니다' 출력됨.
+
+## 7.2 or 조건
+
+- 둘 중 하나만 맞아도 실행된다.
+
+```python
+age1 = int(input("홍길동의 나이는?"))
+age_digit1 = int(age1)
+age2 = int(input("심청이의 나이는?"))
+age_digit2 = int(age2)
+
+if age_digit1 >= 19 or age_digit2 >= 19:
+    print("둘다 성인 맞니? 아닌거같은데.")
+```
+
+둘 중 한명만 인풋값 19 이상이면 print문 출력됨.
+
+## 7.3 not 조건
+
+- 작성한 조건이 아닐경우 실행된다.
+
+```python
+age1 = int(input("홍길동의 나이는?"))
+age_digit1 = int(age1)
+
+if not age_digit1 >= 19:
+    print("미성년자")
+```
+
+홍길동의 나이가 19 이상일 경우 미성년자 라고 출력되게 입력하였지만 if not을 앞에 붙여서 해당 조건이 아닐경우 미성년자 라고 출력이 됨.
+즉 19 미만의 값을 줄 경우 미성년자 라고 출력됨.
