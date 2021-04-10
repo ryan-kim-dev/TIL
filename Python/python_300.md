@@ -4,8 +4,11 @@
 
 - 004 print 기초
 
+```p
 sep = "/"
 sep = ";"
+```
+
 print문 안에서 쉼표로 구분하여 여러가지를 한번에 출력할때 공백을 /나 ;로 바꿔준다.
 
 - 005 print 탭과 줄바꿈
@@ -132,7 +135,8 @@ list : `cars = ['benz', 'audi', 'bmw']`
 ---
 
 - 030 replace 메서드
-  replace 메서드를 사용해서 문자열을 수정하려면 같은 변수명으로 새로 선언을 하던지 새로운 변수명으로 새로 선언을 해야한다.
+
+replace 메서드를 사용해서 문자열을 수정하려면 같은 변수명으로 새로 선언을 하던지 새로운 변수명으로 새로 선언을 해야한다.
 
 ```python
 string = 'abcd'
@@ -141,3 +145,29 @@ print(string)
 ```
 
 `abcd`
+
+## 04. 파이썬 리스트 051 ~ 060
+
+- 052 리스트에 원소 추가
+
+`print (movie_rank.append('배트맨'))` 으로 한번에 print문에서 append함수를 사용하려고 했더니 리스트에 추가가 안되고 `None`으로 출력되었다.
+
+이유 : append 메서드는 return 값으로 None을 돌려주기 때문이다.
+return 값 이란 함수가 어떠한 기능을 수행하고 그 결과를 호출한 곳으로 돌려주는 값을 말한다.  
+해결 : `movie_rank.append('배트맨')` 쓰고 밑에 print문으로 movie_rank 변수 출력하여 해결. [다른 방법](https://whatisthenext.tistory.com/99)도 있으나 아직 배우지 않은 부분이라 우선 배운 방법으로 해결.  
+참고: https://wikidocs.net/21074
+
+- 056
+
+헷갈린 부분 : 문자열끼리 + 하면 정수형이 아니라 오류가 날 줄 알았다.
+
+```python
+lang1 = ["C", "C++", "JAVA"]
+lang2 = ["Python", "Go", "C#"]
+print (lang1 + lang2)
+```
+
+`['C', 'C++', 'JAVA', 'Python', 'Go', 'C#']`  
+해결 : 따로 변수 다시 만들어서 더할 필요 없이 그냥 print문에서 해결 가능.
+
+- 057~60 전부 안배운 내용임, 다음주에 다시 정리
