@@ -46,7 +46,7 @@ input() 괄호 안에 따옴표로 감싸 문자열과 변수의 값을 같이 �
 ```Python
 name = "123"
 name_int = int(name)
-print(name_int)
+print (name_int)
 ```
 
 123
@@ -85,7 +85,7 @@ int(3.4)
 
 ```Python
 variable1 = 4.5
-print(type(variable1))
+print (type(variable1))
 ```
 
 <class 'float'>
@@ -101,8 +101,8 @@ print(type(variable1))
 print함수로 문자열을 입력하려면 '' 또는 "" 으로 감싸야 한다.
 
 ```Python
-print('Life is short!')
-print('use Python!')
+print ('Life is short!')
+print ('use Python!')
 ```
 
 print 함수로 계산식 출력하는 법 중 특이한 기호들
@@ -127,7 +127,7 @@ print 함수로 계산식 출력하는 법 중 특이한 기호들
 - 문자열 안에 넣어서 사용한다.
 
 ```python
-print("I am a %s, you are a %s.")
+print ("I am a %s, you are a %s.")
 %("boy","girl")
 ```
 
@@ -140,18 +140,18 @@ Boolean의 데이터 값은 항상 True, False 두가지 뿐이다.
 
 ```Python
 Boolean = True
-print(3<8)
+print (3<8)
 ```
 
 #### 4.1.1 print문에서의 사용
 
 ```Python
-print(4 < 7) True
-print(4 > 2) False
-print(3 == 3) 서로 같은지
-print(3 != 3) 서로 다른지
-print(3 >= 3) 이상
-print(3 <= 3) 이하
+print (4 < 7) True
+print (4 > 2) False
+print (3 == 3) 서로 같은지
+print (3 != 3) 서로 다른지
+print (3 >= 3) 이상
+print (3 <= 3) 이하
 ```
 
 # 5. 문자열
@@ -179,14 +179,14 @@ print(3 <= 3) 이하
 
 ```python
 example = 'python'
-print(example[2])
+print (example[2])
 ```
 
 t
 
 ```python
 example = 'python'
-print(example[-2])
+print (example[-2])
 ```
 
 o
@@ -197,7 +197,7 @@ o
 
 ```python
 example = 'python'
-print(example[2:4])
+print (example[2:4])
 ```
 
 th
@@ -206,11 +206,28 @@ th
 
 ## 6.1 리스트 선언
 
+### 6.1.1 대괄호 사용하여 리스트 선언하기
+
 [] 대괄호 안에 리스트의 내용을 넣는다.
 
 ```python
 cars = ['benz', 'audi', 'bmw']
+print (cars)
 ```
+
+['benz', 'audi', 'bmw']
+
+### 6.1.2 변수로 리스트 런언하기
+
+list(변수명)
+
+```python
+a = 'asd'
+a = list(a)
+print (a)
+```
+
+['a', 's', 'd']
 
 ## 6.2 리스트 추가
 
@@ -223,7 +240,7 @@ cars = ['benz', 'audi', 'bmw']
 cars.append('hyundai')
 cars.insert(1,'kia')
 
-print(cars)
+print (cars)
 ```
 
 ['benz', 'kia', 'audi', 'bmw', 'hyundai']
@@ -238,7 +255,7 @@ cars = ['benz', 'audi', 'bmw']
 cars.remove('benz')
 del cars[1]
 
-print(cars)
+print (cars)
 ```
 
 ['audi']
@@ -253,7 +270,7 @@ print(cars)
 cars = ['benz', 'audi', 'bmw']
 cars[0] = 'porsche'
 
-print(cars)
+print (cars)
 ```
 
 ['porsche', 'audi', 'bmw']
@@ -267,7 +284,7 @@ print(cars)
 ```python
 cash = int(input("돈 얼마있어?"))
 if cash > 15000:
-    print("점심 나가서 먹자")
+    print ("점심 나가서 먹자")
 ```
 
 input 값이 15000보다 크면 "점심 나가서 먹자" 출력.
@@ -283,7 +300,7 @@ age2 = int(input("심청이의 나이는?"))
 age_digit2 = int(age2)
 
 if age_digit1 >= 19 and age_digit2 >= 19:
-    print("성인입니다")
+    print ("성인입니다")
 ```
 
 홍길동의 나이와 심청이의 나이가 둘 다 19 이상이어야 '성인입니다' 출력됨.
@@ -299,7 +316,7 @@ age2 = int(input("심청이의 나이는?"))
 age_digit2 = int(age2)
 
 if age_digit1 >= 19 or age_digit2 >= 19:
-    print("둘다 성인 맞니? 아닌거같은데.")
+    print ("둘다 성인 맞니? 아닌거같은데.")
 ```
 
 둘 중 한명만 인풋값 19 이상이면 print문 출력됨.
@@ -313,7 +330,7 @@ age1 = int(input("홍길동의 나이는?"))
 age_digit1 = int(age1)
 
 if not age_digit1 >= 19:
-    print("미성년자")
+    print ("미성년자")
 ```
 
 홍길동의 나이가 19 이상일 경우 미성년자 라고 출력되게 입력하였지만 if not을 앞에 붙여서 해당 조건이 아닐경우 미성년자 라고 출력이 됨.
@@ -327,9 +344,9 @@ if not age_digit1 >= 19:
 ```python
 age = int(input("나이는?"))
 if age >= 19:
-    print("성인입니다")
+    print ("성인입니다")
 else:
-    print("미성년입니다")
+    print ("미성년입니다")
 ```
 
 나이가 19세 미만이면 '미성년입니다' 출력.
@@ -341,11 +358,11 @@ else:
 ```python
 age = int(input("나이는?"))
 if age >= 19:
-    print("성인입니다")
+    print ("성인입니다")
 elif age >= 13 and age < 19:
-    print("청소년입니다")
+    print ("청소년입니다")
 else:
-    print("아동입니다")
+    print ("아동입니다")
 ```
 
 나이가 19세 이상일 경우 '성인입니다' 출력.  
